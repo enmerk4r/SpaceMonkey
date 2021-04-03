@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SpaceMonkey.UI"
+             xmlns:controls="clr-namespace:SpaceMonkey.ViewModels.Controls;assembly=SpaceMonkey.ViewModels"
+             xmlns:localControls="clr-namespace:SpaceMonkey.UI.Controls"
              xmlns:convert="clr-namespace:SpaceMonkey.UI.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="400" Background="White">
@@ -62,7 +64,13 @@
             </Button>
 
             <ScrollViewer Grid.Row="2">
-                <ItemsControl Margin="0,5" ItemsSource="{Binding Satellites}"></ItemsControl>
+                <ItemsControl Margin="0,5" ItemsSource="{Binding Satellites}">
+                    <ItemsControl.Resources>
+                        <DataTemplate DataType="{x:Type controls:SatelliteCardViewModel}">
+                            <localControls:SatelliteCard/>
+                        </DataTemplate>
+                    </ItemsControl.Resources>
+                </ItemsControl>
             </ScrollViewer>
 
         </Grid>
