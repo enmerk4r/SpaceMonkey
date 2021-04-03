@@ -45,9 +45,12 @@ namespace SpaceMonkey.ViewModels.Main
         {
             SmAboveResponse response = await this.Client.GetAboveSatellites(this.Latitude, this.Longitude, this.Altitude, this.SearchRadius, this.CategoryId, this.APIKey);
             this.Satellites.Clear();
-            foreach (SmSatellite sat in response.Above)
+            if (response != null)
             {
-                this.Satellites.Add(new SatelliteCardViewModel(sat));
+                foreach (SmSatellite sat in response.Above)
+                {
+                    this.Satellites.Add(new SatelliteCardViewModel(sat));
+                }
             }
         }
 
