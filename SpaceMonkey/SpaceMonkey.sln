@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1401
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceMonkey.MVVM", "SpaceMonkey.MVVM\SpaceMonkey.MVVM.csproj", "{EA579523-A4BA-4EF5-AE47-149CB660B589}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceMonkey.UI", "SpaceMonkey.UI\SpaceMonkey.UI.csproj", "{75B8E302-F121-4D0F-8E25-D17CA083EB85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceMonkey.Rhinoceros", "SpaceMonkey.Rhinoceros\SpaceMonkey.Rhinoceros.csproj", "{D09D55F8-7BCF-486A-8534-7E8E55B83EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceMonkey.WebClient", "SpaceMonkey.HttpClient\SpaceMonkey.WebClient.csproj", "{FFB6E21D-CA82-4275-9E8B-7C5906E4741A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceMonkey.IO", "SpaceMonkey.IO\SpaceMonkey.IO.csproj", "{5F6A1F2B-3408-42BA-A624-3648B450744B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{D09D55F8-7BCF-486A-8534-7E8E55B83EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D09D55F8-7BCF-486A-8534-7E8E55B83EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D09D55F8-7BCF-486A-8534-7E8E55B83EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB6E21D-CA82-4275-9E8B-7C5906E4741A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB6E21D-CA82-4275-9E8B-7C5906E4741A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB6E21D-CA82-4275-9E8B-7C5906E4741A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB6E21D-CA82-4275-9E8B-7C5906E4741A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6A1F2B-3408-42BA-A624-3648B450744B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6A1F2B-3408-42BA-A624-3648B450744B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6A1F2B-3408-42BA-A624-3648B450744B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6A1F2B-3408-42BA-A624-3648B450744B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

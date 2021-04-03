@@ -80,6 +80,20 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceMonkey.MVVM\SpaceMonkey.MVVM.csproj">
+      <Project>{ea579523-a4ba-4ef5-ae47-149cb660b589}</Project>
+      <Name>SpaceMonkey.MVVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaceMonkey.UI\SpaceMonkey.UI.csproj">
+      <Project>{75b8e302-f121-4d0f-8e25-d17ca083eb85}</Project>
+      <Name>SpaceMonkey.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaceMonkey.ViewModels\SpaceMonkey.ViewModels.csproj">
+      <Project>{40323927-fec0-42c9-a4d6-6caf389f3615}</Project>
+      <Name>SpaceMonkey.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
