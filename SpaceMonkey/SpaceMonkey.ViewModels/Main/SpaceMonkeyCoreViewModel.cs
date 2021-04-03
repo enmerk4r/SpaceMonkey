@@ -36,6 +36,8 @@ namespace SpaceMonkey.ViewModels.Main
             this.Categories = new ObservableCollection<string>(CategoryIdHelper.GetCategories());
             this.Client = new SpaceMonkeyWebClient();
             this.GetSatellitesCommand = new RelayCommand(this.GetSatellites);
+            this.SearchRadius = 70;
+            this.CategoryId = 0;
         }
 
 

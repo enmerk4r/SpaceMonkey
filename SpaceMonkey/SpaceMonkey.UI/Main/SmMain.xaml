@@ -4,13 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SpaceMonkey.UI"
+             xmlns:convert="clr-namespace:SpaceMonkey.UI.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="400" Background="White">
     <Grid Margin="10" >
-        <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Expander HorizontalAlignment="Stretch"
                       VerticalAlignment="Top"
-                      Header="Settings">
+                      Header="Settings"
+                      Grid.Row="0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
@@ -45,17 +52,19 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SearchRadius}"/>
                         <Slider Grid.Column="1" Minimum="1" Maximum="90" Interval="1" TickFrequency="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5" Value="{Binding SearchRadius}"/>
                     </Grid>
-                    <ComboBox Grid.Row="5" Grid.Column="1" Margin="5" SelectedItem="0" ItemsSource="{Binding Categories}">
+                    <ComboBox Grid.Row="5" Grid.Column="1" Margin="5" SelectedIndex="0" SelectedItem="{Binding CategoryId, Converter={convert:CategoryToIdConverter}}" ItemsSource="{Binding Categories}">
                     </ComboBox>
                 </Grid>
                 
             </Expander>
-            <Button Margin="0,5" Command="{Binding GetSatellitesCommand}">
+            <Button Margin="0,5" Command="{Binding GetSatellitesCommand}" Grid.Row="1">
                 Search!
             </Button>
-            <ItemsControl Margin="0,5" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ItemsSource="{Binding Satellites}">
-                
-            </ItemsControl>
-        </StackPanel>
+
+            <ScrollViewer Grid.Row="2">
+                <ItemsControl Margin="0,5" ItemsSource="{Binding Satellites}"></ItemsControl>
+            </ScrollViewer>
+
+        </Grid>
     </Grid>
 </UserControl>

@@ -50,7 +50,6 @@
   <ItemGroup>
     <Compile Include="Base\BaseViewModel.cs" />
     <Compile Include="Base\RelayCommand.cs" />
-    <Compile Include="BindingProxy.cs" />
     <Compile Include="Helpers\ExpressionHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

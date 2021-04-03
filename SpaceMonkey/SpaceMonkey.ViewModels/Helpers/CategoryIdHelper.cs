@@ -17,15 +17,28 @@ namespace SpaceMonkey.ViewModels.Helpers
 
         public static int CategoryToId(string cat)
         {
-            if (CategoryDict.ContainsKey(cat))
+            if (cat != null)
             {
-                return CategoryDict[cat];
+                if (CategoryDict.ContainsKey(cat))
+                {
+                    return CategoryDict[cat];
+                }
             }
-            else return -1;
+            return 0;
+        }
+
+        public static string IdToCategory(int id)
+        {
+            foreach(KeyValuePair<string, int> p in CategoryDict)
+            {
+                if (p.Value == id) return p.Key;
+            }
+            return string.Empty;
         }
 
         private static Dictionary<string, int> CategoryDict { get; set; } = new Dictionary<string, int>()
         {
+            {"All", 0 },
             {"Amateur radio", 18},
             {"Beidou Navigation System", 35},
             {"Brightest", 1},
