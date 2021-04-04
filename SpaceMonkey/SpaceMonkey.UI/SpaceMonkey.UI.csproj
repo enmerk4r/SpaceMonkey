@@ -49,6 +49,7 @@
       <DependentUpon>SatelliteCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\BaseValueConverter.cs" />
+    <Compile Include="Converters\ScaleToNumberConverter.cs" />
     <Compile Include="Converters\CategoryToIdConverter.cs" />
     <Compile Include="Main\SmMain.xaml.cs">
       <DependentUpon>SmMain.xaml</DependentUpon>

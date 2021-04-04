@@ -11,25 +11,27 @@ namespace SpaceMonkey.WebClient
 {
     public class SpaceMonkeyWebClient
     {
+        private string ApiKey;
         // Routes
         private string Server => "https://api.n2yo.com/rest/v1";
-        private string GetAboveUrl(double lat, double lng, double alt, int rad, int id, string key)
+        private string GetAboveUrl(double lat, double lng, double alt, int rad, int id)
         {
-            return $"{Server}/satellite/above/{lat}/{lng}/{alt}/{rad}/{id}/&apiKey={key}";
+            return $"{Server}/satellite/above/{lat}/{lng}/{alt}/{rad}/{id}/&apiKey={this.ApiKey}";
         }
 
         /// <summary>
         /// Http Client
         /// </summary>
         private HttpClient Client;
-        public SpaceMonkeyWebClient()
+        public SpaceMonkeyWebClient(string apiKey)
         {
             this.Client = new HttpClient();
+            this.ApiKey = apiKey;
         }
 
-        public async Task<SmAboveResponse> GetAboveSatellites(double lat, double lng, double alt, int rad, int id, string key)
+        public async Task<SmAboveResponse> GetAboveSatellites(double lat, double lng, double alt, int rad, int id)
         {
-            string url = this.GetAboveUrl(lat, lng, alt, rad, id, key);
+            string url = this.GetAboveUrl(lat, lng, alt, rad, id);
             var response = await this.Client.GetAsync(url);
             var res = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<SmAboveResponse>(res);

@@ -49,6 +49,7 @@
     <Compile Include="Schemas\SmAboveResponse.cs" />
     <Compile Include="Schemas\SmInfo.cs" />
     <Compile Include="Schemas\SmSatellite.cs" />
+    <Compile Include="Schemas\SmSecrets.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
