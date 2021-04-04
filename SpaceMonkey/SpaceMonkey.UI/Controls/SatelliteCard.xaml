@@ -3,11 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:SpaceMonkey.UI.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="400" Background="White">
+             d:DesignHeight="270" d:DesignWidth="400" Background="White">
+    <Control.Resources>
+        <ResourceDictionary Source="pack://application:,,,/SpaceMonkey.UI;component/ResourceDictionary/ResourceDictionary.xaml"/>
+    </Control.Resources>
     <Grid Margin="5" Height="auto">
-        <Expander Header="{Binding SatelliteName}">
+        <Expander >
+            <Expander.Header>
+                <Grid Margin="-25,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <materialDesign:PackIcon Kind="Rocket" Width="20" Height="20" Foreground="{StaticResource PrimaryHueDarkForegroundBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Grid.Column="2" Content="{Binding SatelliteName}" FontSize="12" VerticalAlignment="Center"/>
+                </Grid>
+            </Expander.Header>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
@@ -37,7 +52,9 @@
                 <Label  Grid.Row="4" Grid.Column="1" Content="{Binding Longitude}" HorizontalAlignment="Left" Margin="2"/>
                 <Label  Grid.Row="5" Grid.Column="1" Content="{Binding Altitude}" HorizontalAlignment="Left" Margin="2"/>
 
-                <Button Grid.Row="6" Grid.ColumnSpan="2" Content="Bake" Command="{Binding BakeCommand}"/>
+                <Button Grid.Row="6" Grid.ColumnSpan="2" ToolTip="Bake" Command="{Binding BakeCommand}">
+                    <materialDesign:PackIcon Kind="Download" Foreground="{StaticResource PrimaryHueLightForegroundBrush}" Height="25" Width="25"/>
+                </Button>
             </Grid>
             
         </Expander>

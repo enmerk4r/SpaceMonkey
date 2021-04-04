@@ -7,6 +7,7 @@
              xmlns:controls="clr-namespace:SpaceMonkey.ViewModels.Controls;assembly=SpaceMonkey.ViewModels"
              xmlns:localControls="clr-namespace:SpaceMonkey.UI.Controls"
              xmlns:convert="clr-namespace:SpaceMonkey.UI.Converters"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              Name="SpaceMonkeyMainControl"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="400" Background="White">
@@ -22,9 +23,20 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Expander HorizontalAlignment="Stretch"
-                      VerticalAlignment="Top"
+                      VerticalAlignment="Stretch"
                       Header="Settings"
                       Grid.Row="0">
+                <!--<Expander.Header >
+                    <Grid Margin="-25,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <materialDesign:PackIcon Kind="Cog" Width="25" Height="25" Foreground="{StaticResource PrimaryHueDarkForegroundBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label Grid.Column="2" Content="Settings" FontSize="18" VerticalAlignment="Center" Foreground="{StaticResource PrimaryHueDarkForegroundBrush}"/>
+                    </Grid>
+                </Expander.Header>-->
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
@@ -79,8 +91,9 @@
                 </Grid>
                 
             </Expander>
-            <Button Margin="0,5" Command="{Binding GetSatellitesCommand}" Grid.Row="1">
-                Search!
+            <materialDesign:PackIcon Kind="Cog" Width="20" Height="20" Foreground="{StaticResource PrimaryHueDarkForegroundBrush}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"/>
+            <Button Margin="0,5" Command="{Binding GetSatellitesCommand}" Grid.Row="1" ToolTip="Search">
+                <materialDesign:PackIcon Kind="Search" Foreground="{StaticResource PrimaryHueLightForegroundBrush}" Height="25" Width="25"/>
             </Button>
 
             <ScrollViewer Grid.Row="2">
@@ -92,8 +105,8 @@
                     </ItemsControl.Resources>
                 </ItemsControl>
             </ScrollViewer>
-            <Button Margin="0,5" Command="{Binding BakeAllCommand}" Grid.Row="3">
-                Bake
+            <Button Margin="0,5" Command="{Binding BakeAllCommand}" Grid.Row="3" ToolTip="Bake">
+                <materialDesign:PackIcon Kind="Download" Foreground="{StaticResource PrimaryHueLightForegroundBrush}" Height="25" Width="25"/>
             </Button>
         </Grid>
     </Grid>
