@@ -10,6 +10,9 @@
              Name="SpaceMonkeyMainControl"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="400" Background="White">
+    <Control.Resources>
+        <ResourceDictionary Source="pack://application:,,,/SpaceMonkey.UI;component/ResourceDictionary/ResourceDictionary.xaml"/>
+    </Control.Resources>
     <Grid Margin="10" >
         <Grid>
             <Grid.RowDefinitions>
