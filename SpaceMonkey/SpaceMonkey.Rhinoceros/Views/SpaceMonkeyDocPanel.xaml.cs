@@ -21,10 +21,12 @@ namespace SpaceMonkey.Rhinoceros.Views
     /// </summary>
     public partial class SpaceMonkeyDocPanel : UserControl
     {
+        public static SpaceMonkeyDocPanel Instance;
         public SpaceMonkeyDocPanel(uint documentSerialNumber)
         {
             DataContext = new SpaceMonkeyDocPanelViewModel(documentSerialNumber);
             InitializeComponent();
+            Instance = this;
         }
     }
 }

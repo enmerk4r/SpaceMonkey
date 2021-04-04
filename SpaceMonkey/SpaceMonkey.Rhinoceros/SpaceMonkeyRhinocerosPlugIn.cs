@@ -1,4 +1,6 @@
-﻿namespace SpaceMonkey.Rhinoceros
+﻿using SpaceMonkey.ViewModels.Main;
+
+namespace SpaceMonkey.Rhinoceros
 {
     ///<summary>
     /// <para>Every RhinoCommon .rhp assembly must have one and only one PlugIn-derived

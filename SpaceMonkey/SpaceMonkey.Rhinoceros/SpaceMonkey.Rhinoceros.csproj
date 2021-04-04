@@ -81,6 +81,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SpaceMonkey.IO\SpaceMonkey.IO.csproj">
+      <Project>{5f6a1f2b-3408-42ba-a624-3648b450744b}</Project>
+      <Name>SpaceMonkey.IO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SpaceMonkey.MVVM\SpaceMonkey.MVVM.csproj">
       <Project>{ea579523-a4ba-4ef5-ae47-149cb660b589}</Project>
       <Name>SpaceMonkey.MVVM</Name>

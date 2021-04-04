@@ -7,6 +7,7 @@
              xmlns:controls="clr-namespace:SpaceMonkey.ViewModels.Controls;assembly=SpaceMonkey.ViewModels"
              xmlns:localControls="clr-namespace:SpaceMonkey.UI.Controls"
              xmlns:convert="clr-namespace:SpaceMonkey.UI.Converters"
+             Name="SpaceMonkeyMainControl"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="400" Background="White">
     <Grid Margin="10" >
@@ -15,6 +16,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Expander HorizontalAlignment="Stretch"
                       VerticalAlignment="Top"
@@ -72,7 +74,9 @@
                     </ItemsControl.Resources>
                 </ItemsControl>
             </ScrollViewer>
-
+            <Button Margin="0,5" Command="{Binding BakeAllCommand}" Grid.Row="3">
+                Bake
+            </Button>
         </Grid>
     </Grid>
 </UserControl>

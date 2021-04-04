@@ -16,6 +16,7 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="155"/>
@@ -35,6 +36,8 @@
                 <Label  Grid.Row="3" Grid.Column="1" Content="{Binding Latitude}" HorizontalAlignment="Left" Margin="2"/>
                 <Label  Grid.Row="4" Grid.Column="1" Content="{Binding Longitude}" HorizontalAlignment="Left" Margin="2"/>
                 <Label  Grid.Row="5" Grid.Column="1" Content="{Binding Altitude}" HorizontalAlignment="Left" Margin="2"/>
+
+                <Button Grid.Row="6" Grid.ColumnSpan="2" Content="Bake" Command="{Binding BakeCommand}"/>
             </Grid>
             
         </Expander>
