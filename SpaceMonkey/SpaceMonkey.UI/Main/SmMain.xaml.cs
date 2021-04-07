@@ -27,6 +27,19 @@ namespace SpaceMonkey.UI
             this.DataContext = new SpaceMonkeyCoreViewModel();
         }
 
+        private void ScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+
+            if (e.ExtentHeight != 0 && e.VerticalChange > 0 && (e.VerticalOffset + e.ViewportHeight >= 0.99 * e.ExtentHeight))
+            {
+                SpaceMonkeyCoreViewModel vmodel = this.DataContext as SpaceMonkeyCoreViewModel;
+                if (!vmodel.ScrollFreeze)
+                {
+                    vmodel.ShowSatellites();
+                }
+            }
+        }
+
 
     }
 }

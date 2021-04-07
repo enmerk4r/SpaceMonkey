@@ -96,8 +96,8 @@
                 <materialDesign:PackIcon Kind="Search" Foreground="{StaticResource PrimaryHueLightForegroundBrush}" Height="25" Width="25"/>
             </Button>
 
-            <ScrollViewer Grid.Row="2">
-                <ItemsControl Margin="0,5" ItemsSource="{Binding Satellites}">
+            <ScrollViewer Grid.Row="2" ScrollChanged="ScrollViewer_ScrollChanged">
+                <ItemsControl Margin="0,5" ItemsSource="{Binding DisplayedSatellites}">
                     <ItemsControl.Resources>
                         <DataTemplate DataType="{x:Type controls:SatelliteCardViewModel}">
                             <localControls:SatelliteCard/>
