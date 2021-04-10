@@ -38,5 +38,17 @@ If you want to learn more about MVVM and start learning about IoC, then check ou
 
 ### WPF Material Design
 The project's website can be found [here](http://materialdesigninxaml.net/)
+
 WPF Material Design library has been built by [James Willock](https://github.com/ButchersBoy)
+
 And here's the project's [GitHub page](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) with links to documentation and Wikis
+
+## Troubleshooting
+### Fody throws build errors
+If you see an error saying `Fody is only supported on MSBuild 16 and above`, then you're running an older version of Visual Studio: you need VS 2019 or older. That's no big deal, because Visual Studio community is free. If, however, you really really really don't want to install new VS, you can simply downgrade Fody to v3.x.x.
+
+### Rhino 6 says the plugin is not compatible
+You have an old Service Pack. Just upgrade your Rhino.
+
+### Visual Studio doesn't build because of a missing "secrets.json" file
+Read the installation instructions above. That file has to be created by you and contain your free API key for N2YO
