@@ -26,6 +26,9 @@ A sample Rhino plugin to showcase MVVM, MaterialDesign and calling into a REST A
 ## Resources
 ![](https://github.com/enmerk4r/SpaceMonkey/blob/main/Assets/SpaceMonkey_1.gif)
 
+### Livestream
+The original livestream where this project and its underlying concepts are discussed [can be found here](https://www.youtube.com/watch?v=s7WC-3DGpoI&t=1589s&ab_channel=EngineeringArchiTECHure)
+
 ### Satellite Tracking API
 The satellite tracking API is provided by [N2YO](https://www.n2yo.com/)
 Their REST API documentation can be found [here](https://www.n2yo.com/api/)
