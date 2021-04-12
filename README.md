@@ -1,6 +1,8 @@
 # SpaceMonkey
 A sample Rhino plugin to showcase MVVM, MaterialDesign and calling into a REST API. For the purposes of this exercise we're writing a tool that calls into the N2YO API in order to get current coordinates and metadata for satellites in Earth's orbit, which we can then bake to Rhino. This project very purposely **does not use IoC**, which would normally be another vital component of scalable modern applications. This is because IoC is a whole other animal to tackle and we're just trying to focus on the WPF side of things here.
 
+[Recording of the YouTube Livestream](https://www.youtube.com/watch?v=s7WC-3DGpoI&t=1589s&ab_channel=EngineeringArchiTECHure)
+
 ![](https://github.com/enmerk4r/SpaceMonkey/blob/main/Assets/FrontPage.PNG)
 
 ## Requirements
